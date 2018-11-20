@@ -6,7 +6,7 @@
   "scripts": {
     "server-dev": "nodemon index.js",
     "react-dev": "webpack -d --watch",
-    "start": "webpack -d --watch"
+    "test": "jest --watch"
   },
   "babel": {
     "presets": [
@@ -27,6 +27,7 @@
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-2": "^6.24.1",
     "express": "^4.16.4",
+    "jest": "^23.6.0",
     "nodemon": "^1.18.6",
     "react": "16.4.2",
     "react-dom": "16.4.2",
