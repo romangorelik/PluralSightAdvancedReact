@@ -1,13 +1,23 @@
 import React from 'react'
+import DataApi from '../../../DataApi.js'
+import { data } from '../../../testData.json'
+
+import ArticleList from './ArticleList.jsx'
+
+const api = new DataApi(data)
 
 class App extends React.Component {
   state = {
-    answer: 42
+    articles: api.getArticles(),
+    authors: api.getAuthors()
   }
 
   render () {
     return (
-      <div>Hello React Components -- {this.state.answer}</div>
+      <ArticleList 
+        articles={this.state.articles}
+        authors={this.state.authors}
+      />
     )
   }
 }
